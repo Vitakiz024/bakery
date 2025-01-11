@@ -66,3 +66,7 @@ button.call-back:hover {
   border: 1px solid var(--color-primary-normal);
   cursor: pointer;
 }
+
+.header > span {
+  color: var(--color-primary-normal);
+}
