@@ -9,41 +9,69 @@
   --color-secondary-dark: #465929;
 }
 
-html {
+body {
   color: var(--color-primary-dark);
+  background-color: var(--color-primary-ligtht);
+  font-size: 18px;
+  margin: 0px;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+  font-style: ;
 }
 
 ul,
 ol {
   list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+section,
+header,
+footer {
+  margin: 0px;
+  padding: 0px;
 }
 
 h1 {
   font-weight: 900;
-  font-size: 64px;
+  font-size: 128px;
 }
 
 h2 {
   font-weight: 900;
-  font-size: 32px;
+  font-size: 64px;
 }
 
 h3 {
+  font-weight: 900;
+  font-size: 32px;
+}
+
+h4 {
   font-weight: 600;
   font-size: 24px;
 }
 
-h4 {
+h5 {
   font-weight: 400;
   font-size: 20px;
 }
 
-h5 {
+h6 {
   font-weight: 400;
   font-size: 18px;
 }
@@ -51,14 +79,46 @@ h5 {
 .caps {
   text-transform: uppercase;
 }
+
+.wrapper {
+  width: 100%;
+  max-width: 1236px;
+  margin: 48px auto;
+  padding: 0px 16px;
+}
+
 /* header */
 
 header {
   color: var(--color-primary-ligtht);
+  background-image: url(../images/image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 740px;
+  padding-top: 34px;
+}
+
+header > .wrapper {
+  margin-top: 0px;
+}
+
+.header-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-menu > ul {
+  display: flex;
+  flex-direction: row;
+  gap: 64px;
+  justify-content: space-between;
 }
 
 .header-menu a:hover {
   color: var(--color-primary-normal);
+  font-weight: 600;
 }
 
 button.call-back {
@@ -67,6 +127,9 @@ button.call-back {
   color: var(--color-primary-ligtht);
   border-radius: 8px;
   border: 1px solid var(--color-primary-normal);
+  font-weight: 600;
+  font-size: 18px;
+  font-family: inherit;
 }
 
 button.call-back:hover {
@@ -75,7 +138,78 @@ button.call-back:hover {
   border: 1px solid var(--color-primary-normal);
   cursor: pointer;
 }
-
-.primary-color-text {
+.header-text {
+  text-align: center;
+  padding-top: 180px;
+}
+.accent {
   color: var(--color-primary-normal);
 }
+
+/* Advantages */
+
+.hidden {
+  position: absolute;
+  left: -100000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.section-advantages {
+  background-color: var(--color-primary-normal);
+}
+
+.section-advantages > .wrapper {
+  margin-top: 0px;
+}
+
+.advantages-article > ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 62px;
+  color: var(--color-primary-ligtht);
+}
+
+/* Traditions */
+
+.section-tradition > .wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 220px;
+  justify-content: space-between;
+}
+
+.section-tradition p {
+  padding: 21px 0px;
+}
+
+.baker-photo > img {
+  border-radius: 50%;
+}
+
+/* chefs */
+.chefs-header {
+  text-align: center;
+}
+
+.chefs-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.chef-article {
+  width: 600px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.chef-article-item > p {
+  padding: 21px 0px;
+}
+/* Formats */
