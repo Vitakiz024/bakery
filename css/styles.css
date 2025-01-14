@@ -139,12 +139,18 @@ button.call-back:hover {
   border: 1px solid var(--color-primary-normal);
   cursor: pointer;
 }
+
 .header-text {
   text-align: center;
   padding-top: 180px;
 }
+
 .accent {
   color: var(--color-primary-normal);
+}
+
+.centered {
+  text-align: center;
 }
 
 /* Advantages */
@@ -189,18 +195,35 @@ button.call-back:hover {
 }
 
 .baker-photo > img {
-  border-radius: 50%;
+  border-radius: 50% 50% 0px 0px;
 }
 
 /* chefs */
+
 .chefs-header {
-  text-align: center;
+  max-width: 520px;
+  margin: 0 auto 80px;
+}
+
+.chefs-header::after,
+.chefs-header::before {
+  display: block;
+  width: 352px;
+  height: 2px;
+  background-color: var(--color-secondary-ligtht);
+  content: "";
 }
 
 .chefs-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.chef-photo {
+  border-radius: 4px 4px 4px 50%;
+  box-shadow: var(--color-primary-ligtht) -16px 16px 0px,
+    var(--color-secondary-normal) -16px 16px 0px 1px;
 }
 
 .chef-article {
@@ -213,9 +236,58 @@ button.call-back:hover {
 .chef-article-item > p {
   padding: 21px 0px;
 }
+
 /* Formats */
 
+.slider-items {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.arrow-right,
+.arrow-left {
+  fill: var(--color-primary-dark);
+  border: var(--color-primary-dark) 1px solid;
+  border-radius: 50%;
+  padding: 15px;
+}
+
+.arrow-left {
+  rotate: 180deg;
+}
+
+.arrow-right:hover,
+.arrow-left:hover {
+  background-color: var(--color-primary-dark);
+  fill: var(--color-primary-ligtht);
+}
+
+.slider-item {
+  background-image: linear-gradient(
+    180deg,
+    rgba(49, 38, 26, 0) 55.21%,
+    rgba(49, 38, 26, 0.71) 72.92%,
+    #31261a 100%
+  );
+  border-radius: 16px;
+  height: 444px;
+  width: calc((100% - 40px) / 3);
+}
+
+/* Contacts */
+
+.section-contacts > .wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 /* footer */
+
 footer {
   background-image: url(../images/footer-backgound.png);
   background-repeat: no-repeat;
@@ -223,6 +295,34 @@ footer {
   background-size: cover;
   color: var(--color-primary-ligtht);
 }
+
+footer > .wrapper {
+  padding: 32px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 150px;
+}
+
+.footer-element {
+  max-width: 211px;
+}
+
 .social-icon {
   fill: var(--color-primary-ligtht);
+  padding-right: 22px;
+}
+
+.social-icon:hover {
+  fill: var(--color-primary-normal);
+}
+
+.footer-contact,
+.footer-copyright {
+  font-size: 16px;
+}
+
+footer li,
+footer p {
+  padding-bottom: 16px;
 }

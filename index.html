@@ -61,8 +61,8 @@
     </section>
     <section id="chefs" class="section-chefs">
       <div class="wrapper">
-        <h2 class="chefs-header">
-          Наші найкращі <br />
+        <h2 class="chefs-header centered">
+          Наші найкращі
           <span class="accent">шеф -кухарі</span>
         </h2>
         <div class="chefs-container">
@@ -71,7 +71,7 @@
               <img
                 src="./images/chef-nastya.jpg"
                 alt="Nastya chef"
-                class="chef-foto"
+                class="chef-photo"
               />
             </div>
             <div class="chef-article-item">
@@ -92,7 +92,7 @@
               <img
                 src="./images/chef-vlad.jpg"
                 alt="Vlad chef"
-                class="chef-foto"
+                class="chef-photo"
               />
             </div>
             <div class="chef-article-item">
@@ -110,10 +110,13 @@
     </section>
     <section id="formats" class="section-formats">
       <div class="wrapper">
+        <h2 class="formats-heder centered">Формати</h2>
         <div class="slider">
           <div class="slider-items">
+            <svg class="arrow-right" width="16" height="16">
+              <use href="./images/sprite-svg.svg#icon-arrow"></use>
+            </svg>
             <div class="slider-item">
-              <img src="" alt="" />
               <h4>Warlus</h4>
               <p>Площа: до 120 м2</p>
               <p>Меню: розширене меню</p>
@@ -137,6 +140,9 @@
               <p>Штат: 1 продавець, 1 пекар, 1 помічник пекаря</p>
               <p>Посадкові місця: відсутні</p>
             </div>
+            <svg class="arrow-left" width="16" height="16">
+              <use href="./images/sprite-svg.svg#icon-arrow"></use>
+            </svg>
           </div>
         </div>
       </div>
@@ -147,17 +153,27 @@
           <h2>Приєднуйся до мережі пекарень</h2>
           <h4>Заповни форму, щоб ми звʼязались з тобою!</h4>
         </div>
-        <div class="contact-map"></div>
+        <div class="contact-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.1636289098733!2d30.4912733!3d50.4566776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce637c006b2d%3A0xaf86385f19996ff0!2z0LLRg9C70LjRhtGPINCh0ZbRh9C-0LLQuNGFINCh0YLRgNGW0LvRjNGG0ZbQsiwgNTQsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1suk!2sua!4v1736891471952!5m2!1suk!2sua"
+            width="600"
+            height="600"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
       </div>
     </section>
     <footer>
       <div class="wrapper">
-        <div class="footer-logo">
-          <a href="#" target="_blank" rel="noopener noreferrer">
+        <div class="footer-logo footer-element">
+          <a href="#" target="_blank">
             <img src="./images/logo.svg" alt="logo" />
           </a>
         </div>
-        <div class="footer-menu">
+        <div class="footer-menu footer-element">
           <ul>
             <li><a href="#">Наші традицій</a></li>
             <li><a href="#">Шеф-кухарі</a></li>
@@ -165,9 +181,9 @@
             <li><a href="#">Контакти</a></li>
           </ul>
         </div>
-        <div class="footer-contacts">
-          <a href="tel:+380960000007">+38(096)000 00 07</a>
-          <a href="mailto:shopbakery@gmail.com">shopbakery@gmail.com</a>
+        <div class="footer-contacts footer-element">
+          <p><a href="tel:+380960000007">+38(096)000 00 07</a></p>
+          <p><a href="mailto:shopbakery@gmail.com">shopbakery@gmail.com</a></p>
           <p class="addres">Україна, м. Київ, вул. Січових Стрільців 54</p>
           <a href="#">
             <svg class="social-icon" width="32" height="32">
@@ -180,7 +196,7 @@
             </svg>
           </a>
         </div>
-        <div class="footer-copyright">
+        <div class="footer-copyright footer-element">
           <p>Політика конфіденційності</p>
           <p>© 2022 Дані захищені</p>
         </div>
