@@ -21,7 +21,7 @@ body {
 a {
   text-decoration: none;
   color: inherit;
-  font-style: ;
+  font-style: inherit;
 }
 
 ul,
@@ -95,6 +95,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   height: 740px;
+  background-position: center;
   padding-top: 34px;
 }
 
@@ -213,3 +214,15 @@ button.call-back:hover {
   padding: 21px 0px;
 }
 /* Formats */
+
+/* footer */
+footer {
+  background-image: url(../images/footer-backgound.png);
+  background-repeat: no-repeat;
+  background-color: var(--color-primary-dark);
+  background-size: cover;
+  color: var(--color-primary-ligtht);
+}
+.social-icon {
+  fill: var(--color-primary-ligtht);
+}
