@@ -21,7 +21,9 @@
               <li><a href="#contacts">Контакти</a></li>
             </ul>
           </div>
-          <button type="button" class="call-back">Замовити дзвінок</button>
+          <button type="button" class="button modal-btn-open">
+            Замовити дзвінок
+          </button>
         </nav>
         <h1 class="header-text"><span class="accent">Сучасна</span> Пекарня</h1>
       </div>
@@ -62,7 +64,7 @@
     <section id="chefs" class="section-chefs">
       <div class="wrapper">
         <h2 class="chefs-header centered">
-          Наші найкращі
+          Наші найкращі <br />
           <span class="accent">шеф -кухарі</span>
         </h2>
         <div class="chefs-container">
@@ -117,28 +119,49 @@
               <use href="./images/sprite-svg.svg#icon-arrow"></use>
             </svg>
             <div class="slider-item">
-              <h4>Warlus</h4>
-              <p>Площа: до 120 м2</p>
-              <p>Меню: розширене меню</p>
-              <p>
-                Штат: 2 продавці-касири, 2 пекарі, 2 помічники пекаря, 2
-                офіціанти-різнороби
-              </p>
-              <p>Посадкові місця: є</p>
+              <img
+                src="./images/warlus.png"
+                alt="Format Warlus photo"
+                class="slider-img"
+              />
+              <div class="slider-text">
+                <h4>Warlus</h4>
+                <p>Площа: до 120 м2</p>
+                <p>Меню: розширене меню</p>
+                <p>
+                  Штат: 2 продавці-касири, 2 пекарі, 2 помічники пекаря, 2
+                  офіціанти-різнороби
+                </p>
+                <p>Посадкові місця: є</p>
+              </div>
             </div>
             <div class="slider-item">
-              <h4>Horseshoe</h4>
-              <p>Площа: до 25 м2</p>
-              <p>Меню: найпопулярніші позиції меню</p>
-              <p>Штат: 2 продавці-касири, 2 пекарі, 1 помічник пекаря</p>
-              <p>Посадкові місця: відсутні</p>
+              <img
+                src="./images/harseshoe.png"
+                alt="Format Horseshoe photo"
+                class="slider-img"
+              />
+              <div class="slider-text">
+                <h4>Horseshoe</h4>
+                <p>Площа: до 25 м2</p>
+                <p>Меню: найпопулярніші позиції меню</p>
+                <p>Штат: 2 продавці-касири, 2 пекарі, 1 помічник пекаря</p>
+                <p>Посадкові місця: відсутні</p>
+              </div>
             </div>
             <div class="slider-item">
-              <h4>Handlebar</h4>
-              <p>Площа: до 15 м2</p>
-              <p>Меню: найпопулярніші позиції меню</p>
-              <p>Штат: 1 продавець, 1 пекар, 1 помічник пекаря</p>
-              <p>Посадкові місця: відсутні</p>
+              <img
+                src="./images/handlebar.png"
+                alt="Format Handlebar photo"
+                class="slider-img"
+              />
+              <div class="slider-text">
+                <h4>Handlebar</h4>
+                <p>Площа: до 15 м2</p>
+                <p>Меню: найпопулярніші позиції меню</p>
+                <p>Штат: 1 продавець, 1 пекар, 1 помічник пекаря</p>
+                <p>Посадкові місця: відсутні</p>
+              </div>
             </div>
             <svg class="arrow-left" width="16" height="16">
               <use href="./images/sprite-svg.svg#icon-arrow"></use>
@@ -150,8 +173,43 @@
     <section id="contacts" class="section-contacts">
       <div class="wrapper">
         <div class="contact-form">
-          <h2>Приєднуйся до мережі пекарень</h2>
-          <h4>Заповни форму, щоб ми звʼязались з тобою!</h4>
+          <form name="contacts-form" autocomplete="off" novalidate>
+            <div class="contact-form-header">
+              <h2>Приєднуйся до мережі пекарень</h2>
+              <h4>Заповни форму, щоб ми звʼязались з тобою!</h4>
+            </div>
+            <div class="form-items">
+              <label for="form-name" class="hidden">Ім'я</label>
+              <input
+                class="form-input"
+                type="text"
+                name="form-name"
+                id="form-name"
+                placeholder="Ім'я"
+              />
+              <label for="form-tel" class="hidden">Телефон</label>
+              <input
+                class="form-input"
+                type="tel"
+                name="form-tel"
+                id="form-tel"
+                placeholder="Телефон"
+              />
+              <label for="form-email" class="hidden">Електронна пошта</label>
+              <input
+                class="form-input"
+                type="email"
+                name="form-email"
+                id="form-email"
+                placeholder="Електронна пошта"
+              />
+              <button type="submit" class="button">Замовити дзвінок</button>
+              <p>
+                Натискаючи на кнопку я погоджуюсь з <br />
+                <a href="#">політикою конфіденційності</a>
+              </p>
+            </div>
+          </form>
         </div>
         <div class="contact-map">
           <iframe
@@ -169,16 +227,16 @@
     <footer>
       <div class="wrapper">
         <div class="footer-logo footer-element">
-          <a href="#" target="_blank">
+          <a href="#">
             <img src="./images/logo.svg" alt="logo" />
           </a>
         </div>
         <div class="footer-menu footer-element">
           <ul>
-            <li><a href="#">Наші традицій</a></li>
-            <li><a href="#">Шеф-кухарі</a></li>
-            <li><a href="#">Формати</a></li>
-            <li><a href="#">Контакти</a></li>
+            <li><a href="#advantages">Наші традицій</a></li>
+            <li><a href="#chefs">Шеф-кухарі</a></li>
+            <li><a href="#formats">Формати</a></li>
+            <li><a href="#contacts">Контакти</a></li>
           </ul>
         </div>
         <div class="footer-contacts footer-element">
@@ -202,5 +260,48 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is_hiden">
+      <div class="modal">
+        <button type="button" class="modal-btn-close">X</button>
+        <form name="call-back-form" autocomplete="off" novalidate>
+          <div class="form-header">
+            <h2>Замовити дзвінок</h2>
+            <h6>Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</h6>
+          </div>
+          <div class="form-items">
+            <label for="form-name" class="hidden">Ім'я</label>
+            <input
+              class="form-input"
+              type="text"
+              name="form-name"
+              id="form-name"
+              placeholder="Ім'я"
+            />
+            <label for="form-tel" class="hidden">Телефон</label>
+            <input
+              class="form-input"
+              type="tel"
+              name="form-tel"
+              id="form-tel"
+              placeholder="Телефон"
+            />
+            <label for="form-email" class="hidden">Електронна пошта</label>
+            <input
+              class="form-input"
+              type="email"
+              name="form-email"
+              id="form-email"
+              placeholder="Електронна пошта"
+            />
+            <button type="submit" class="button">Замовити дзвінок</button>
+            <p>
+              Натискаючи на кнопку я погоджуюсь з <br />
+              <a href="#">політикою конфіденційності</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
   </body>
 </html>

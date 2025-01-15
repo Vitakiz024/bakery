@@ -22,6 +22,11 @@ a {
   text-decoration: none;
   color: inherit;
   font-style: inherit;
+  transition: color 0.3s;
+}
+
+svg {
+  transition: fill 0.3s;
 }
 
 ul,
@@ -117,12 +122,11 @@ header > .wrapper {
   justify-content: space-between;
 }
 
-.header-menu a:hover {
+ul a:hover {
   color: var(--color-primary-normal);
-  font-weight: 600;
 }
 
-button.call-back {
+button.button {
   padding: 16px 32px;
   background-color: var(--color-primary-normal);
   color: var(--color-primary-ligtht);
@@ -131,9 +135,10 @@ button.call-back {
   font-weight: 600;
   font-size: 18px;
   font-family: inherit;
+  width: 240px;
 }
 
-button.call-back:hover {
+button.button:hover {
   background-color: var(--color-primary-ligtht);
   color: var(--color-secondary-dark);
   border: 1px solid var(--color-primary-normal);
@@ -201,23 +206,33 @@ button.call-back:hover {
 /* chefs */
 
 .chefs-header {
-  max-width: 520px;
   margin: 0 auto 80px;
+  position: relative;
 }
 
 .chefs-header::after,
 .chefs-header::before {
-  display: block;
   width: 352px;
   height: 2px;
   background-color: var(--color-secondary-ligtht);
   content: "";
+  position: absolute;
+  bottom: 24px;
+}
+
+.chefs-header::after {
+  right: 8px;
+}
+
+.chefs-header::before {
+  left: 8px;
 }
 
 .chefs-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .chef-photo {
@@ -227,7 +242,7 @@ button.call-back:hover {
 }
 
 .chef-article {
-  width: 600px;
+  flex-basis: 600px;
   display: flex;
   flex-direction: row;
   gap: 30px;
@@ -242,7 +257,6 @@ button.call-back:hover {
 .slider-items {
   display: flex;
   flex-direction: row;
-  width: 100%;
   flex-wrap: nowrap;
   align-items: center;
   gap: 20px;
@@ -254,6 +268,7 @@ button.call-back:hover {
   border: var(--color-primary-dark) 1px solid;
   border-radius: 50%;
   padding: 15px;
+  cursor: pointer;
 }
 
 .arrow-left {
@@ -274,8 +289,24 @@ button.call-back:hover {
     #31261a 100%
   );
   border-radius: 16px;
-  height: 444px;
+  height: 244px;
   width: calc((100% - 40px) / 3);
+  padding: 248px 24px 0;
+  position: relative;
+}
+
+.slider-img {
+  position: absolute;
+  z-index: -1;
+  top: 45px;
+  left: 3px;
+  transform: scale(1.015);
+}
+.slider-text {
+  color: var(--color-primary-ligtht);
+}
+.slider-text > h4 {
+  padding-bottom: 16px;
 }
 
 /* Contacts */
@@ -284,6 +315,15 @@ button.call-back:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: 32px;
+}
+
+.contact-form-header {
+  margin-bottom: 42px;
+}
+
+.contact-form-header > h2 {
+  margin-bottom: 16px;
 }
 
 /* footer */
@@ -294,6 +334,31 @@ footer {
   background-color: var(--color-primary-dark);
   background-size: cover;
   color: var(--color-primary-ligtht);
+  position: relative;
+}
+
+footer::before,
+footer::after {
+  content: "";
+  background-repeat: no-repeat;
+
+  position: absolute;
+  bottom: 0;
+}
+
+footer::before {
+  background-image: url(../images/hlib-single.png);
+  right: 48px;
+  left: 0;
+  width: 180px;
+  height: 120px;
+}
+
+footer::after {
+  background-image: url(../images/hlib-dual.png);
+  right: 0;
+  width: 380px;
+  height: 187px;
 }
 
 footer > .wrapper {
@@ -325,4 +390,90 @@ footer > .wrapper {
 footer li,
 footer p {
   padding-bottom: 16px;
+}
+
+/* Modal */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(49, 38, 26, 0.71);
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.backdrop.is_hiden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  max-height: 880px;
+  max-width: 880px;
+  width: 100%;
+  padding: 128px 128px 20px;
+  background-color: var(--color-secondary-ligtht);
+  border-radius: 32px;
+  position: relative;
+  overflow: auto;
+}
+
+.modal-btn-close {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  font-size: 24px;
+}
+
+/* Form */
+
+.form-header {
+  margin-bottom: 72px;
+  text-align: center;
+}
+
+.form-header > h2 {
+  margin-bottom: 8px;
+}
+.form-items {
+  margin: 0 auto;
+  max-width: 605px;
+  width: 100%;
+}
+
+.form-input {
+  max-width: 520px;
+  width: 100%;
+  padding: 16px 42px;
+  border-radius: 5px;
+  margin-bottom: 32px;
+  font-size: 16px;
+}
+
+.form-input:focus::placeholder {
+  color: var(--color-primary-dark);
+}
+
+.form-items > .button {
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 24px;
+}
+
+.form-items > p {
+  text-align: center;
+}
+
+.form-items > p > a {
+  text-decoration-line: underline;
+}
+
+.form-items > p > a:hover {
+  color: var(--color-secondary-normal);
 }
