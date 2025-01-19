@@ -125,7 +125,7 @@
                 class="slider-img"
               />
               <div class="slider-text">
-                <h4>Warlus</h4>
+                <h4 lang="en">Warlus</h4>
                 <p>Площа: до 120 м2</p>
                 <p>Меню: розширене меню</p>
                 <p>
@@ -142,7 +142,7 @@
                 class="slider-img"
               />
               <div class="slider-text">
-                <h4>Horseshoe</h4>
+                <h4 lang="en">Horseshoe</h4>
                 <p>Площа: до 25 м2</p>
                 <p>Меню: найпопулярніші позиції меню</p>
                 <p>Штат: 2 продавці-касири, 2 пекарі, 1 помічник пекаря</p>
@@ -156,7 +156,7 @@
                 class="slider-img"
               />
               <div class="slider-text">
-                <h4>Handlebar</h4>
+                <h4 lang="en">Handlebar</h4>
                 <p>Площа: до 15 м2</p>
                 <p>Меню: найпопулярніші позиції меню</p>
                 <p>Штат: 1 продавець, 1 пекар, 1 помічник пекаря</p>
@@ -173,7 +173,7 @@
     <section id="contacts" class="section-contacts">
       <div class="wrapper">
         <div class="contact-form">
-          <form name="contacts-form" autocomplete="off" novalidate>
+          <form name="contacts-form" autocomplete="off">
             <div class="contact-form-header">
               <h2>Приєднуйся до мережі пекарень</h2>
               <h4>Заповни форму, щоб ми звʼязались з тобою!</h4>
@@ -186,6 +186,7 @@
                 name="form-name"
                 id="form-name"
                 placeholder="Ім'я"
+                required
               />
               <label for="form-tel" class="hidden">Телефон</label>
               <input
@@ -194,6 +195,8 @@
                 name="form-tel"
                 id="form-tel"
                 placeholder="Телефон"
+                pattern="^\+[0-9]{12}"
+                required
               />
               <label for="form-email" class="hidden">Електронна пошта</label>
               <input
@@ -202,6 +205,7 @@
                 name="form-email"
                 id="form-email"
                 placeholder="Електронна пошта"
+                required
               />
               <button type="submit" class="button">Замовити дзвінок</button>
               <p>
@@ -240,23 +244,29 @@
           </ul>
         </div>
         <div class="footer-contacts footer-element">
-          <p><a href="tel:+380960000007">+38(096)000 00 07</a></p>
-          <p><a href="mailto:shopbakery@gmail.com">shopbakery@gmail.com</a></p>
-          <p class="addres">Україна, м. Київ, вул. Січових Стрільців 54</p>
-          <a href="#">
-            <svg class="social-icon" width="32" height="32">
-              <use href="./images/sprite-svg.svg#icon-facebook"></use>
-            </svg>
-          </a>
-          <a href="#">
-            <svg class="social-icon" width="32" height="32">
-              <use href="./images/sprite-svg.svg#icon-instagram"></use>
-            </svg>
-          </a>
+          <ul>
+            <li><a href="tel:+380960000007">+38(096)000 00 07</a></li>
+            <li>
+              <a href="mailto:shopbakery@gmail.com">shopbakery@gmail.com</a>
+            </li>
+            <li>Україна, м. Київ, вул. Січових Стрільців 54</li>
+            <li>
+              <a href="#" class="social-icon">
+                <svg width="32" height="32">
+                  <use href="./images/sprite-svg.svg#icon-facebook"></use>
+                </svg>
+              </a>
+              <a href="#" class="social-icon">
+                <svg width="32" height="32">
+                  <use href="./images/sprite-svg.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
         <div class="footer-copyright footer-element">
           <p>Політика конфіденційності</p>
-          <p>© 2022 Дані захищені</p>
+          <p class="accent">© 2022 Дані захищені</p>
         </div>
       </div>
     </footer>
@@ -276,6 +286,7 @@
               name="form-name"
               id="form-name"
               placeholder="Ім'я"
+              required
             />
             <label for="form-tel" class="hidden">Телефон</label>
             <input
@@ -284,6 +295,8 @@
               name="form-tel"
               id="form-tel"
               placeholder="Телефон"
+              pattern="^\+[0-9]{12}"
+              required
             />
             <label for="form-email" class="hidden">Електронна пошта</label>
             <input
@@ -292,6 +305,7 @@
               name="form-email"
               id="form-email"
               placeholder="Електронна пошта"
+              required
             />
             <button type="submit" class="button">Замовити дзвінок</button>
             <p>
