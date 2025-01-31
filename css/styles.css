@@ -1,33 +1,33 @@
 @font-face {
   font-display: swap;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 300;
-  src: url("../fonts/Poppinspoppins-v22-latin-300.woff2") format("woff2");
+  src: url('../fonts/Poppins/poppins-v22-latin-300.woff2');
 }
 
 @font-face {
   font-display: swap;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/Poppinspoppins-v22-latin-regular.woff2") format("woff2");
+  src: url('../fonts/Poppins/poppins-v22-latin-regular.woff2');
 }
 
 @font-face {
   font-display: swap;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 600;
-  src: url("../fonts/Poppinspoppins-v22-latin-600.woff2") format("woff2");
+  src: url('../fonts/Poppins/poppins-v22-latin-600.woff2');
 }
 
 @font-face {
   font-display: swap;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 900;
-  src: url("../fonts/Poppinspoppins-v22-latin-900.woff2") format("woff2");
+  src: url('../fonts/Poppins/poppins-v22-latin-900.woff2');
 }
 
 :root {
@@ -49,7 +49,7 @@ body {
   font-size: 18px;
   line-height: 1.5;
   margin: 0px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 a {
@@ -57,6 +57,7 @@ a {
   color: inherit;
   font-style: inherit;
   transition: color 0.3s;
+  display: inline-block;
 }
 
 svg {
@@ -83,7 +84,6 @@ header,
 footer {
   margin: 0px;
   padding: 0px;
-  line-height: 1.5;
 }
 
 h1 {
@@ -122,7 +122,7 @@ h6 {
 
 .wrapper {
   width: 100%;
-  max-width: 1236px;
+  max-width: 1240px;
   margin: 0 auto;
   padding: 48px 0px;
 }
@@ -141,6 +141,7 @@ header {
 
 header > .wrapper {
   margin-top: 0px;
+  padding: 0;
 }
 
 .header-nav {
@@ -212,6 +213,7 @@ button.button:hover {
 
 .section-advantages > .wrapper {
   margin-top: 0px;
+  padding: 0;
 }
 
 .advantages-article > ul {
@@ -252,7 +254,7 @@ button.button:hover {
   width: 352px;
   height: 2px;
   background-color: var(--color-secondary-ligtht);
-  content: "";
+  content: '';
   position: absolute;
   bottom: 24px;
 }
@@ -299,26 +301,30 @@ button.button:hover {
   gap: 20px;
 }
 
-.arrow-right,
-.arrow-left {
-  fill: var(--color-primary-dark);
+.slider-button {
   border: var(--color-primary-dark) 1px solid;
   border-radius: 50%;
   padding: 15px;
   cursor: pointer;
+  fill: var(--color-primary-dark);
 }
 
 .arrow-left {
   rotate: 180deg;
 }
 
-.arrow-right:hover,
-.arrow-left:hover {
+.slider-button:hover {
   background-color: var(--color-primary-dark);
   fill: var(--color-primary-ligtht);
 }
 
-.slider-item {
+.formats-list {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.formats-item {
   background-image: linear-gradient(
     180deg,
     rgba(49, 38, 26, 0) 55.21%,
@@ -330,6 +336,7 @@ button.button:hover {
   width: calc((100% - 40px) / 3);
   padding: 248px 24px 0px;
   position: relative;
+  overflow: hidden;
 }
 
 .slider-img {
@@ -339,9 +346,10 @@ button.button:hover {
   left: 0;
   right: 0;
   bottom: 0;
+  width: 100%;
 }
 
-.slider-item:hover {
+.formats-item:hover {
   transform: scale(1.05);
 }
 
@@ -371,6 +379,11 @@ button.button:hover {
   margin-bottom: 16px;
 }
 
+.contact-form .form-input {
+  margin-bottom: 24px;
+  max-width: 100%;
+}
+
 /* footer */
 
 footer {
@@ -388,7 +401,7 @@ footer > .wrapper {
 
 footer::before,
 footer::after {
-  content: "";
+  content: '';
   background-repeat: no-repeat;
 
   position: absolute;
@@ -497,7 +510,6 @@ footer p {
 }
 
 .form-input {
-  max-width: 520px;
   width: 100%;
   padding: 16px 42px;
   border-radius: 5px;
@@ -512,7 +524,7 @@ footer p {
 .form-items > .button {
   margin: 0 auto;
   display: block;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .form-items > p {
